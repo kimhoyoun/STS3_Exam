@@ -39,7 +39,9 @@ for(int i =0; i<memberList.size(); i++){
 	}
 	%>
 </table>
-
-
+<hr />
+<ul>
+	<li><a href="<%= request.getContextPath()%>">홈으로</a></li>
+</ul>
 </body>
 </html>
