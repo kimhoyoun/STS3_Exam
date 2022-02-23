@@ -42,6 +42,7 @@ for(int i =0; i<memberList.size(); i++){
 <hr />
 <ul>
 	<li><a href="<%= request.getContextPath()%>">홈으로</a></li>
+	<li><a href="login.action">로그인</a></li>
 </ul>
 </body>
 </html>

@@ -26,4 +26,10 @@ public class MemberController {
 		model.addAttribute("memberList", memberList);
 		return "member/list";
 	}
+	
+	@RequestMapping(value = "login.action", method = RequestMethod.GET)
+	public String memberLogin() {
+		
+		return "member/login";
+	}
 }
