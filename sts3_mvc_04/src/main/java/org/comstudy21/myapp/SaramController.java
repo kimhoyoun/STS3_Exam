@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value="/saram")
 public class SaramController {
 
-	private static ArrayList<SaramDto> saramList = new ArrayList<>();
+	private static ArrayList<SaramDto> saramList = new ArrayList();
 	
 	static {
 		saramList.add(new SaramDto(SaramDto.nextSeq(),"KIM","김길동","kim@kim.com"));

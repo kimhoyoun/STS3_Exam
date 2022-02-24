@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value="/member")
 public class MemberController {
 	
-	private static ArrayList<MemberDto> memberList = new ArrayList<>();
+	private static ArrayList<MemberDto> memberList = new ArrayList();
 	
 	static {
 		memberList.add(new MemberDto(MemberDto.nextSeq(),"KIM","김길동","kim","kim@kim.com"));
