@@ -8,7 +8,7 @@ public class ConnectionDB {
 	public static Connection getConnection() {
 		try {
 			Class.forName("org.h2.Driver");
-			return DriverManager.getConnection("jdbc:h2:tcp://localhost/D:\\spring_workspace\\db\\stsEx1","sa","");
+			return DriverManager.getConnection("jdbc:h2:tcp://localhost/Z:\\spring_workspace\\db\\stsEx1","sa","");
 		} catch (ClassNotFoundException e) {
 			System.out.println("Class not Found...");
 		} catch (SQLException e) {

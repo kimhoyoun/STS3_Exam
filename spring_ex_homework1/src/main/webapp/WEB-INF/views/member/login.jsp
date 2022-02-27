@@ -17,7 +17,7 @@
 		</tr>
 		<tr>
 			<th>비밀번호</th>
-			<td><input type = "password" name = "pwd"></td>
+			<td><input type = "password" name = "pw"></td>
 		</tr>
 		<tr>
 			<th colspan = 2><input type = "submit" value = "로그인"></th>

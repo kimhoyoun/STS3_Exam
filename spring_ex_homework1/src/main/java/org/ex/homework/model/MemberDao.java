@@ -9,19 +9,23 @@ import java.sql.Statement;
 import org.ex.homework.db.ConnectionDB;
 
 public class MemberDao {
-	public static final String LOGIN = "SELECT * FROM USER WHERE ID = ? & pwd = ?";
+	public static final String LOGIN = "SELECT * FROM member WHERE ID = ? and pwd = ?";
 	public static Connection conn = null;
 	public static ResultSet rs = null;
 	public static Statement stmt = null;
 	public static PreparedStatement pstmt = null;
 	
+	public static MemberDao dao = new MemberDao();
 	
+	public static MemberDao getDao() {
+		return dao;
+	}
 	
 	public void init() {
 		
 	}
 	
-	public void login(MemberDto dto) {
+	public MemberDto login(MemberDto dto) {
 		MemberDto member = null;
 		conn = ConnectionDB.getConnection();
 		try {
@@ -38,10 +42,12 @@ public class MemberDao {
 
 				member = new MemberDto(no, name, id, pw, email);
 			}
-			
+			if(member == null) {
+				member = new MemberDto(-1, "", "", "", "");
+			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return member;
 	}
 }
